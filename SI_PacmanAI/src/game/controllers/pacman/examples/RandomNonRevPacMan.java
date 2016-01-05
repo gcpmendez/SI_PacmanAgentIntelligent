@@ -10,7 +10,11 @@ public final class RandomNonRevPacMan extends PacManHijackController
 {	
 	@Override
 	public void tick(Game game, long timeDue) {
-		int[] directions=game.getPossiblePacManDirs(false);		//set flag as false to prevent reversals	
+		int[] directions=game.getPossiblePacManDirs(false);		//set flag as false to prevent reversals
+		for(int iterator: directions) {
+			System.out.print(iterator);
+		}
+		System.out.println();
 		pacman.set(directions[G.rnd.nextInt(directions.length)]);		
 	}
 		

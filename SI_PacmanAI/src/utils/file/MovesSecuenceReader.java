@@ -3,7 +3,7 @@
  * Package name: filereader
  * Proyect name: SI_PacmanAI
  */
-package filereader;
+package utils.file;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,7 +18,7 @@ public class MovesSecuenceReader {
 	public MovesSecuenceReader() throws IOException {
 		secuence = new ArrayList<>();
 		String line = "";
-		FileReader f = new FileReader("src/filereader/example.txt");
+		FileReader f = new FileReader("src/configs/Prove_MovesSecuencePacman.txt");
 		BufferedReader b = new BufferedReader(f);
 		while ((line = b.readLine()) != null) {
 			switch (line) {
