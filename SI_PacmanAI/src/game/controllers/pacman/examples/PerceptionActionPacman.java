@@ -39,9 +39,9 @@ public class PerceptionActionPacman extends PacManHijackController {
 		
 		for (int i = 0; i < neightbours.length; i++) {
 			if (neightbours[i] != -1)
-				System.out.print(this.game.getPillIndex(neightbours[i]));
+				System.out.print(this.game.getPillIndex(neightbours[i])+",");
 			else if(neightbours[i] == -1)
-				System.out.print(neightbours[i]);
+				System.out.print(neightbours[i]+",");
 		}
 		System.out.println("");
 		
