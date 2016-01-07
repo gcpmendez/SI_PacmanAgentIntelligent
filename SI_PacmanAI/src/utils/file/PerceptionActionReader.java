@@ -44,11 +44,15 @@ public class PerceptionActionReader {
 					break;
 
 				case "EMPTY":
-					auxArray.add(4);
+					auxArray.add(PAGlobals.EMPTY);
 					break;
 
 				case "PILL":
-					auxArray.add(5);
+					auxArray.add(PAGlobals.PILL);
+					break;
+					
+				case "WALL":
+					auxArray.add(PAGlobals.WALL);
 					break;
 					
 				default:
