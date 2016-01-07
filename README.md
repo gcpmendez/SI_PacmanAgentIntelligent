@@ -14,9 +14,11 @@ Elaboración de un agente inteligente para el juego de Ms. Pac-Man utilizando di
 
 ## Descripción
 
-+ **PACMAN basado en programación de movimientos,**
++ **PACMAN basado en una Secuencia de movimientos,**
   * Definimos un agente inteligente `PacMan` que intentará resolver el laberinto de una manera pre-programada.
 
++ **PACMAN basado en una tabla de Persepción-Acción,**
+  * Definimos un agente inteligente `PacMan` que intentará resolver el laberinto de una manera pre-programada.
 
 + **PACMAN basado en el algoritmo A*,**
  * Definimos un agente inteligente `PacMan` que reemplazará al ser humano reproduciendo una simplicada versión de juego. El único objetivo será perseguir las bolas de poder.
