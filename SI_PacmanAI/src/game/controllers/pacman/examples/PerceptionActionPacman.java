@@ -36,9 +36,18 @@ public class PerceptionActionPacman extends PacManHijackController {
 	@Override
 	public void tick(Game game, long timeDue) {
 		int[] neightbours = this.game.getPacManNeighbours();
+		
+		for (int i = 0; i < neightbours.length; i++) {
+			if (neightbours[i] != -1)
+				System.out.print(this.game.getPillIndex(neightbours[i]));
+			else if(neightbours[i] == -1)
+				System.out.print(neightbours[i]);
+		}
+		System.out.println("");
+		
 		boolean stop = false;
 		for (int i = 0; i < PATable.size(); i++) {
-			if(stop == true)
+			if (stop == true)
 				break;
 			for (int j = 0; j < PATable.get(i).size(); j++) {
 				if (j == 4) {
@@ -46,9 +55,9 @@ public class PerceptionActionPacman extends PacManHijackController {
 					stop = true;
 				} else {
 					if (neightbours[j] == Game.EMPTY) {
-						if(PATable.get(i).get(j) != PAGlobals.WALL)
+						if (PATable.get(i).get(j) != PAGlobals.WALL)
 							break;
-					}else {
+					} else {
 						if (this.game.getPillIndex(neightbours[j]) == Game.EMPTY
 								&& PATable.get(i).get(j) != PAGlobals.EMPTY)
 							break;
